@@ -15,7 +15,7 @@ async def main():
         await asyncio.sleep(1)
         second_elapsed = second_elapsed + 1
 
-        if second_elapsed == 5:
+        if second_elapsed == 1:
             long_task.cancel()
 
     try:
