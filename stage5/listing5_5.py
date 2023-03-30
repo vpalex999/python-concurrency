@@ -6,7 +6,7 @@ from random import sample
 
 
 def load_common_words() -> List[str]:
-    with open("stage5/common_words.txt") as common_words:
+    with open("common_words.txt") as common_words:
         return common_words.readlines()
 
 
