@@ -21,11 +21,9 @@ class StressTest:
         self._refresh_rate = total_requests // 100
 
     def start(self) -> None:
-        if self._load_test_future:
-            future = asyncio.run_coroutine_threadsafe(
-                self._make_requests(), self._loop)
-
-            self._load_test_future = future
+        future = asyncio.run_coroutine_threadsafe(
+            self._make_requests(), self._loop)
+        self._load_test_future = future
 
     def cancel(self) -> None:
         if self._load_test_future is not None:
